@@ -86,7 +86,7 @@ const about = {
                 ],
                 images: [ // optional: leave the array empty if you don't want to display images
                     {
-                        src: 'https://raw.githubusercontent.com/victorratts13/laravel-task-manager/main/public/wallpaper-02.png',
+                        src: '/images/portifolio/task-mananger/01.pn',
                         alt: 'Laravel Task Manager',
                         width: 16,
                         height: 9
