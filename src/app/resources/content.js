@@ -1,21 +1,21 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-    firstName: 'Selene',
-    lastName:  'Yu',
+    firstName: 'Victor',
+    lastName:  'Ratts',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Design Engineer',
+    role:      'Desenvolvedor Fullstack',
     avatar:    '/images/avatar.jpg',
-    location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
+    location:  'America/Sao_Paulo',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+    languages: ['English', 'Portuguese']  // optional: Leave the array empty if you don't want to display languages
 }
 
 const newsletter = {
     display: true,
-    title: <>Subscribe to {person.firstName}'s Newsletter</>,
-    description: <>I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.</>
+    title: "Inscreva-se para receber novidades de projetos",
+    description: "Sempre desenvolvendo soluções e contribuindo com novos projetos"
 }
 
 const social = [
@@ -24,12 +24,12 @@ const social = [
     {
         name: 'GitHub',
         icon: 'github',
-        link: 'https://github.com/once-ui-system/nextjs-starter',
+        link: 'https://github.com/vhratts   ',
     },
     {
         name: 'LinkedIn',
         icon: 'linkedin',
-        link: 'https://www.linkedin.com/company/once-ui/',
+        link: 'https://www.linkedin.com/in/vratts/',
     },
     {
         name: 'X',
@@ -39,21 +39,21 @@ const social = [
     {
         name: 'Email',
         icon: 'email',
-        link: 'mailto:example@gmail.com',
+        link: 'mailto:victor@vratts.com',
     },
 ]
 
 const home = {
-    label: 'Home',
-    title: `${person.name}'s Portfolio`,
-    description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Design engineer and builder</>,
-    subline: <>I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive<br/> user experiences. After hours, I build my own projects.</>
+    label: 'Inicio',
+    title: `${person.name}' - Portfolio`,
+    description: `Portifolio de trabalhos e projetos concluidos.`,
+    headline: <>Desenvolvedor de sistemas e engenheiro de software</>,
+    subline: <>Desenvolvedor FullStack desde 2013, com especialidade em PHP/Laravel. Formado pelo Instituto Federal do Ceará, sempre buscando inovar e encontrar soluções criativas para problemas complexos.</>
 }
 
 const about = {
-    label: 'About',
-    title: 'About me',
+    label: 'Sobre',
+    title: 'Sobre mim',
     description: `Meet ${person.name}, ${person.role} from ${person.location}`,
     tableOfContent: {
         display: true,
@@ -68,39 +68,53 @@ const about = {
     },
     intro: {
         display: true,
-        title: 'Introduction',
-        description: <>Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology.</>
+        title: 'Introdução',
+        description: <>Desenvolvedor FullStack desde 2013, com especialidade em PHP/Laravel, javascript, Ruby e kotlin. Formado pelo Instituto Federal do Ceará.</>
     },
     work: {
         display: true, // set to false to hide this section
-        title: 'Work Experience',
+        title: 'Experiencia de trabalho',
         experiences: [
             {
-                company: 'FLY',
-                timeframe: '2022 - Present',
-                role: 'Senior Design Engineer',
+                company: 'Desenvolvedor Autônomo',
+                timeframe: '2022 - Presente',
+                role: 'Desenvolvedor',
                 achievements: [
-                    <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
-                    <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
+                    <>Desenvolvo e contruo aplicações nas mais diversas tecnologias. Construção de soluções dedicadas.</>,
+                    <>Criação de plataformas roustas e sistemas de alta demanda.</>,
+                    <>Desenvolvimento de Bots e serviços de comunicação em tempo real</>
                 ],
                 images: [ // optional: leave the array empty if you don't want to display images
                     {
-                        src: '/images/projects/project-01/cover-01.jpg',
-                        alt: 'Once UI Project',
+                        src: 'https://raw.githubusercontent.com/victorratts13/laravel-task-manager/main/public/wallpaper-02.png',
+                        alt: 'Laravel Task Manager',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/portifolio/bidlink/01.png',
+                        alt: 'Bidlink - Sistema de leilão (Front)',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/portifolio/bidlink/07.png',
+                        alt: 'Bidlink - Sistema de leilão (SaaS)',
                         width: 16,
                         height: 9
                     }
                 ]
             },
             {
-                company: 'Creativ3',
-                timeframe: '2018 - 2022',
-                role: 'Lead Designer',
+                company: 'Rover Labs',
+                timeframe: '2019 - 2022',
+                role: 'Desenvolvedor Senior',
                 achievements: [
-                    <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
-                    <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
+                    <>Responsavel pelo desenvolvimento de plataformas oferecidas aos clientes (sistemas para consultorio médico, sistema pra callcenter e sistema para comercios em geral)</>,
+                    <>Suporte dedicado aos clientes Premium da empresa</>
                 ],
-                images: [ ]
+                images: [ 
+                 ]
             }
         ]
     },
@@ -109,22 +123,18 @@ const about = {
         title: 'Studies',
         institutions: [
             {
-                name: 'University of Jakarta',
-                description: <>Studied software engineering.</>,
+                name: 'Instituto Federal do Ceará (IFCE)',
+                description: <>Ciências da computação. (BACHAREL)</>,
             },
-            {
-                name: 'Build the Future',
-                description: <>Studied online marketing and personal branding.</>,
-            }
         ]
     },
     technical: {
         display: true, // set to false to hide this section
-        title: 'Technical skills',
+        title: 'Conhecimentos e Certificações',
         skills: [
             {
-                title: 'Figma',
-                description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+                title: 'Laravel',
+                description: <>Desenvolvedor PHP/Laravel desde 2016.</>,
                 images: [
                     {
                         src: '/images/projects/project-01/cover-02.jpg',
