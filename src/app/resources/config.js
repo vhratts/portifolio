@@ -1,4 +1,4 @@
-const baseURL = 'demo.app'
+const baseURL = 'portifolio-vratts.vercel.app'
 
 // Enable localization
 const i18n = false;
@@ -13,8 +13,8 @@ const routes = {
     '/':        true,
     '/about':   true,
     '/work':    true,
-    '/blog':    true,
-    '/gallery': true,
+    '/blog':    false,
+    '/gallery': false,
 }
 
 // Enable password protection on selected routes
