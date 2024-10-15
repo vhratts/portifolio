@@ -1,13 +1,13 @@
 ---
-title: "Laravel task-mananger"
+title: "Laravel Task-Manager"
 publishedAt: "2024-07-25"
 summary: "Gerenciador de tarefas e processos para agendamento e filas."
 images:
-  - "/images/portifolio/task-mananger/01.png"
-  - "/images/portifolio/task-mananger/02.png"
-  - "/images/portifolio/task-mananger/03.png"
-  - "/images/portifolio/task-mananger/04.png"
-  - "/images/portifolio/task-mananger/05.png"
+  - "/images/portifolio/task-manager/01.png"
+  - "/images/portifolio/task-manager/02.png"
+  - "/images/portifolio/task-manager/03.png"
+  - "/images/portifolio/task-manager/04.png"
+  - "/images/portifolio/task-manager/05.png"
 team:
   - name: "Victor Ratts"
     role: "Software Engineer"
@@ -15,80 +15,67 @@ team:
     github: "https://github.com/vhratts"
 ---
 
-<p align="center">
-<a href="#" target="_blank" style="display: flex; justify-content: center;">
-<img src="https://raw.githubusercontent.com/victorratts13/laravel-task-manager/main/public/app.png" width="400" alt="Laravel Logo" style="width: 80px;" />
-</a>
-</p>
+![Laravel Logo](https://raw.githubusercontent.com/victorratts13/laravel-task-manager/main/public/app.png)
 
-<p align="center">
-<a href="#" style="font-size: 30px;">Gerenciador de Tarefas Laravel</a>
-</p>
+# Gerenciador de Tarefas Laravel
 
-<p align="center">
-<img src="https://img.shields.io/badge/version-1.1.3-cyan" alt="versão" />
-<img src="https://img.shields.io/badge/build-pass-red" alt="build" />
-<img src="https://img.shields.io/badge/test-pass-green" alt="test" />
-</p>
+![Versão](https://img.shields.io/badge/version-1.1.3-cyan)
+![Build](https://img.shields.io/badge/build-pass-red)
+![Test](https://img.shields.io/badge/test-pass-green)
 
-<p align="center">
-<img src="/images/portifolio/task-mananger/wallpaper-02.png" />
-</p>
-
+![Wallpaper](./images/portifolio/task-manager/wallpaper-02.png)
 
 ## Sobre o Gerenciador de Tarefas
 
-O Gerenciador de Tarefas é um sistema Laravel para gerenciar tarefas no seu servidor. Ele funciona como uma interface para ```cronjobs``` e executa tarefas em segundo plano, seja um script Linux, um arquivo PHP ou um comando específico no seu servidor de produção. Pode ser utilizado tanto em servidores dedicados quanto compartilhados.
+O Gerenciador de Tarefas é um sistema Laravel para gerenciar tarefas no seu servidor. Ele funciona como uma interface para `cronjobs` e executa tarefas em segundo plano, seja um script Linux, um arquivo PHP ou um comando específico no seu servidor de produção. Pode ser utilizado tanto em servidores dedicados quanto compartilhados.
 
 ## Serviços de Hospedagem Testados
 
-| Serviço | Provedor | Status |
-|---------|----------|--------|
-| Hospedagem Dedicada | Hostinger | ✅ |
-| Hospedagem Compartilhada | Hostinger | ✅ |
-| Hospedagem Premium | Hostigator | ✅ |
-| Hospedagem Compartilhada | Hostigator | ✅ |
-| Hospedagem Dedicada | Digital Ocean | ✅ |
+| Serviço                  | Provedor     | Status |
+|--------------------------|--------------|--------|
+| Hospedagem Dedicada      | Hostinger    | ✅     |
+| Hospedagem Compartilhada | Hostinger    | ✅     |
+| Hospedagem Premium       | Hostigator   | ✅     |
+| Hospedagem Compartilhada | Hostigator   | ✅     |
+| Hospedagem Dedicada      | Digital Ocean| ✅     |
 
 ## Instalação
 
 Para instalar, são necessários os seguintes requisitos:
 
->- PHP versão 8.2 ou superior
->- Composer versão 2.7 ou superior
->- cURL instalado
->- Banco de dados: sqlite3, MySQL, PostgreSQL ou MongoDB
+- PHP versão 8.2 ou superior
+- Composer versão 2.7 ou superior
+- cURL instalado
+- Banco de dados: sqlite3, MySQL, PostgreSQL ou MongoDB
 
-#### Instalação Passo a Passo
-* Clone este repositório ou faça o download para o seu servidor.
-* Instale as dependências com o Composer:
-```sh
-composer install --no-interaction --prefer-dist --optimize-autoloader
-```
-* Crie um arquivo ```.env``` a partir do arquivo ```.env.example```:
-```sh
-cat .env.example >> .env
-```
-* Gere uma chave para a aplicação:
-```sh
-php artisan key:generate
-```
-* Execute a migração do sistema:
-```sh
-php artisan migrate
-```
+### Instalação Passo a Passo
+
+1. Clone este repositório ou faça o download para o seu servidor.
+2. Instale as dependências com o Composer:
+    ```bash
+    composer install --no-interaction --prefer-dist --optimize-autoloader
+    ```
+3. Crie um arquivo `.env` a partir do arquivo `.env.example`:
+    ```bash
+    cat .env.example >> .env
+    ```
+4. Gere uma chave para a aplicação:
+    ```bash
+    php artisan key:generate
+    ```
+5. Execute a migração do sistema:
+    ```bash
+    php artisan migrate
+    ```
 
 ## Configurando Serviços
 
-Após a instalação, o sistema estará acessível via URL de instalação.
-Para acessar o painel, use a rota ```/manager```.
+Após a instalação, o sistema estará acessível via URL de instalação. Para acessar o painel, use a rota `/manager`.
 
-No entanto, o sistema ainda precisa ser configurado. Para que o sistema funcione, é necessário apontar apenas 1 cronjob para o endpoint ```/supervisor``` com ```cURL``` ou ```wget```. Dessa forma, o sistema executa internamente o comando ```app:supervisor```, que mantém os processos e serviços registrados em execução contínua de acordo com a configuração e o intervalo definido.
+No entanto, o sistema ainda precisa ser configurado. Para que o sistema funcione, é necessário apontar apenas 1 cronjob para o endpoint `/supervisor` com `cURL` ou `wget`. Dessa forma, o sistema executa internamente o comando `app:supervisor`, que mantém os processos e serviços registrados em execução contínua de acordo com a configuração e o intervalo definido.
 
->- NOTA: Para garantir que os serviços do Gerenciador permaneçam sempre em execução, recomenda-se usar um intervalo de 1 minuto para o cronjob.
+> **Nota:** Para garantir que os serviços do Gerenciador permaneçam sempre em execução, recomenda-se usar um intervalo de 1 minuto para o cronjob.
 
 Exemplo para configurar cronjob:
- ```bash
+```bash
 * * * * * curl https://[seu-dominio-do-taskmanager.com]/supervisor
- ```
-Substitua [seu-dominio-do-taskmanager.com] pelo domínio da sua aplicação do gerenciador de tarefas.
