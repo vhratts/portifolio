@@ -47,7 +47,7 @@ const home = {
     label: 'Inicio',
     title: `${person.name}' - Portfolio`,
     description: `Portifolio de trabalhos e projetos concluidos.`,
-    headline: <>Desenvolvedor de sistemas e engenheiro de software</>,
+    headline: <>Victor Ratts</>,
     subline: <>Desenvolvedor FullStack desde 2013, com especialidade em PHP/Laravel. Formado pelo Instituto Federal do Ceará, sempre buscando inovar e encontrar soluções criativas para problemas complexos.</>
 }
 
